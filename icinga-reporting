@@ -1,34 +1,31 @@
 #! /bin/sh
 ### BEGIN INIT INFO
-# Provides:          icinga-reporting
-# Required-Start:    
-# Required-Stop:
-# Should-Start:
-# Should-Stop:
+# Provides:          skeleton
+# Required-Start:    $local_fs $remote_fs $syslog $named $network $time icinga
+# Required-Stop:     $local_fs $remote_fs $syslog $named $network
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
-# chkconfig: 345 85 15
 # Short-Description: start and stop Icinga-Reporting daemon
 # Description:       Icinga is a service monitoring system
 ### END INIT INFO
 
-JASPERCTLSCRIPT="/opt/jasperreports-server-cp-5.5.0/ctlscript.sh "
+JASPERCTLSCRIPT="/opt/jasperreports-server-cp-5.5.0/ctlscript.sh"
 
 start()
 {
-	"$JASPERCTLSCRIPT" start postgres
+	$JASPERCTLSCRIPT start
 }
 stop()
 {
-	"$JASPERCTLSCRIPT" stop postgres
+	$JASPERCTLSCRIPT stop
 }
 restart()
 {
-	$JASPERCTLSCRIPT restart postgres
+	$JASPERCTLSCRIPT restart
 }
 status()
 {
-	$JASPERCTLSCRIPT status postgres
+	$JASPERCTLSCRIPT status
 }
 
 case "$1" in
