@@ -9,7 +9,7 @@
 # Description:       Icinga is a service monitoring system
 ### END INIT INFO
 
-JASPERCTLSCRIPT="/usr/local/jasperreports-server-cp-5.5.0a/ctlscript.sh"
+JASPERCTLSCRIPT="/usr/local/jasperreports-server-cp-5.6.1/ctlscript.sh"
 
 start()
 {
